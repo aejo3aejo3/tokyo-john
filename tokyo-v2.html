@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 東京行程 (D1-D5 最終定案版)</title>
+    <title>2026 東京行程 (D1-D5 終極完全體)</title>
     <style>
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 10px; color: #333; background-color: #f5f7fa; }
         .container { max-width: 1100px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
@@ -22,6 +22,7 @@
         .highlight-blue { color: #1c3d73; font-weight: bold; }
         .transport-box { background: #e8f5e9; border-left: 5px solid #4caf50; padding: 10px; margin-bottom: 15px; font-size: 13px; }
         .info-box { background: #fff9db; border-left: 5px solid #fcc419; padding: 10px; margin-bottom: 15px; font-size: 13px; }
+        .spot-light { background: #f3f0ff; border-left: 5px solid #7048e8; padding: 10px; margin-top: 15px; font-size: 13px; border-radius: 4px; }
         @media screen and (max-width: 800px) {
             table, thead, tbody, th, td, tr { display: block; }
             thead tr { position: absolute; top: -9999px; left: -9999px; } 
@@ -33,38 +34,46 @@
 </head>
 <body>
     <div class="container">
-        <h1>🗓️ 2026 東京行程 (D1-D5 最終定案版)</h1>
+        <h1>🗓️ 2026 東京行程 (D1-D5 終極完全體)</h1>
 
         <div class="tabs">
             <input type="radio" id="d1" name="days" checked>
             <label for="d1">D1 (2/12)</label>
             <div class="tab-content">
                 <div class="transport-box">
-                    🚀 <strong>機場至飯店交通建議：</strong><br>
-                    <strong>● 方案 A (最省力)：</strong>利木津巴士 ➔ T-CAT (水天宮前)。下車步行 7-9 分。<br>
-                    <strong>● 方案 B (高 CP 值)：</strong>京成 Access 特快 ➔ 日本橋站 (D2出口)。下車步行 10-12 分。
+                    🚀 <strong>機場交通：</strong>方案 A (利木津巴士至 T-CAT) 或 方案 B (Access 特快至日本橋)。
                 </div>
                 <div class="info-box">📍 <strong>預約：Yakiniku Yamawarau (17:30)</strong></div>
                 <table>
                     <thead><tr><th>時段</th><th>活動</th><th>詳細/備註</th></tr></thead>
                     <tbody>
-                        <tr><td data-label="時段">下午</td><td data-label="活動">銀座巡禮</td><td data-label="詳細">Uniqlo、銀座 Six 逛街</td></tr>
+                        <tr><td data-label="時段">下午</td><td data-label="活動">銀座巡禮</td><td data-label="詳細">銀座 Six、奢華品牌大道散步</td></tr>
                         <tr><td data-label="時段">17:30</td><td data-label="活動" class="highlight-red">Yamawarau 燒肉</td><td data-label="詳細">和牛高品質蛋白質補充</td></tr>
-                        <tr><td data-label="時段">晚上</td><td data-label="活動" class="highlight-blue">雙點燈行程</td><td data-label="詳細">日比谷 & 丸之內點燈</td></tr>
+                        <tr><td data-label="時段">19:30</td><td data-label="活動" class="highlight-blue">銀座 Uniqlo</td><td data-label="詳細">全球旗艦店採購</td></tr>
+                        <tr><td data-label="時段">20:30</td><td data-label="活動" class="highlight-blue">雙點燈行程</td><td data-label="詳細">日比谷 & 丸之內 (步行約 10-15 分可串連)</td></tr>
                     </tbody>
                 </table>
+                <div class="spot-light">
+                    ✨ <strong>關於「雙點燈」說明：</strong><br>
+                    <strong>1. HIBIYA Magic Time Illumination：</strong>紫色、藍色夢幻光影，主題為極光。<br>
+                    <strong>2. 丸之內點燈：</strong>1.2 公里經典香檳金 LED 燈大道，東京最奢華冬季經典。
+                </div>
             </div>
 
             <input type="radio" id="d2" name="days">
             <label for="d2">D2 (2/13)</label>
             <div class="tab-content">
-                <div class="info-box">🍽️ <strong>淺草午餐選：</strong>染太郎、淺草鶴二郎、江戶葫蘆文字燒<br>🍡 <strong>甜點：</strong>舟和仲見世 1 號店 (地瓜羊羹/糰子)</div>
+                <div class="info-box">🍽️ <strong>淺草午餐：</strong>染太郎、淺草鶴二郎、江戶葫蘆文字燒<br>🍡 <strong>甜點：</strong>舟和仲見世 1 號店</div>
                 <table>
                     <thead><tr><th>時段</th><th>活動</th><th>詳細/備註</th></tr></thead>
                     <tbody>
                         <tr><td data-label="時段">上午</td><td data-label="活動">上野公園</td><td data-label="詳細">晨間散步消脂</td></tr>
-                        <tr><td data-label="時段">中午</td><td data-label="活動">淺草雷門 & 午餐</td><td data-label="詳細">雷門參拜後，品嚐道地下町文字燒 / 御好燒</td></tr>
-                        <tr><td data-label="時段">下午</td><td data-label="活動" class="highlight-blue">錦糸町戰鬥採買</td><td data-label="詳細">Arcakit (阿卡將、大創、Uniqlo)</td></tr>
+                        <tr><td data-label="時段">中午</td><td data-label="活動">淺草雷門 & 午餐</td><td data-label="詳細">雷門參拜後，品嚐文字燒/御好燒</td></tr>
+                        <tr><td data-label="時段">下午</td><td data-label="活動" class="highlight-blue">淺草 & 錦糸町採買</td><td data-label="詳細">
+                            1. <strong>淺草ROX：</strong>COMME CA STYLE (九州好看短袖襯衫)<br>
+                            2. <strong>olinas：</strong>petit main (3F)<br>
+                            3. <strong>arcakit：</strong>阿卡將 (5F)、3coins (3F)
+                        </td></tr>
                         <tr><td data-label="時段">晚上</td><td data-label="活動">燒肉 房家 / 唐吉</td><td data-label="詳細">上野六丁目店 / 24H 唐吉</td></tr>
                     </tbody>
                 </table>
@@ -73,15 +82,15 @@
             <input type="radio" id="d3" name="days">
             <label for="d3">D3 (2/14)</label>
             <div class="tab-content">
-                <div class="info-box">🍽️ <strong>午餐：</strong>AFURI 中目黒 (柚子鹽拉麵)</div>
+                <div class="info-box">🍽️ <strong>午餐：</strong>AFURI 中目黑 (柚子鹽拉麵)</div>
                 <table>
                     <thead><tr><th>時段</th><th>活動</th><th>詳細/備註</th></tr></thead>
                     <tbody>
-                        <tr><td data-label="時段">08:30</td><td data-label="活動" class="highlight-blue">GARDEN HOUSE CRAFTS</td><td data-label="詳細">代官山早午餐 (最早時段)</td></tr>
+                        <tr><td data-label="時段">08:30</td><td data-label="活動" class="highlight-blue">GARDEN HOUSE CRAFTS</td><td data-label="詳細">代官山早午餐</td></tr>
                         <tr><td data-label="時段">上午</td><td data-label="活動">中目黑 & 代官山巡禮</td><td data-label="詳細">朝倉家舊宅 ➔ 目黑天空庭園 ➔ 星巴克旗艦店 / 蔦屋書店</td></tr>
-                        <tr><td data-label="時段">中午</td><td data-label="活動" class="highlight-red">AFURI 中目黒</td><td data-label="詳細">清爽系拉麵，補充碳水與能量</td></tr>
-                        <tr><td data-label="時段">下午</td><td data-label="活動">涉谷最新地標</td><td data-label="詳細">宮下公園 / LINE FRIENDS 旗艦店採買</td></tr>
-                        <tr><td data-label="時段">晚上</td><td data-label="活動" class="highlight-red">涉谷 Legato</td><td data-label="詳細">高質感餐酒館慶祝晚餐 (情人節)</td></tr>
+                        <tr><td data-label="時段">中午</td><td data-label="活動" class="highlight-red">AFURI 中目黑</td><td data-label="詳細">柚子鹽拉麵補充能量</td></tr>
+                        <tr><td data-label="時段">下午</td><td data-label="活動">涉谷最新地標</td><td data-label="詳細">宮下公園 / LINE FRIENDS 旗艦店</td></tr>
+                        <tr><td data-label="時段">晚上</td><td data-label="活動" class="highlight-red">涉谷 Legato</td><td data-label="詳細">高質感餐酒館慶祝 (情人節)</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -89,14 +98,15 @@
             <input type="radio" id="d4" name="days">
             <label for="d4">D4 (2/15)</label>
             <div class="tab-content">
-                <div class="info-box">🍽️ <strong>新宿午餐選：</strong>Afuri、龍之家、春樹、敘敘苑、麵屋武藏<br>🍰 <strong>午茶：</strong>HARBS 或 果實園</div>
+                <div class="info-box">🍰 <strong>午茶：</strong>HARBS 或 果實園</div>
                 <table>
                     <thead><tr><th>時段</th><th>活動</th><th>詳細/備註</th></tr></thead>
                     <tbody>
-                        <tr><td data-label="時段">上午</td><td data-label="活動" class="highlight-blue">明治神宮</td><td data-label="詳細">森林浴散步 (代代木公園側)</td></tr>
-                        <tr><td data-label="時段">下午</td><td data-label="活動">竹下通 & 表參道</td><td data-label="詳細">潮流逛街、特色建築巡禮</td></tr>
-                        <tr><td data-label="時段">傍晚</td><td data-label="活動">東京都廳夜景</td><td data-label="詳細">免費展望室看夕陽與新宿高樓群</td></tr>
-                        <tr><td data-label="時段">晚上</td><td data-label="活動" class="highlight-red">鳥貴族 原宿明治通店</td><td data-label="詳細">高蛋白雞肉串燒，收尾慶祝</td></tr>
+                        <tr><td data-label="時段">上午</td><td data-label="活動" class="highlight-blue">明治神宮</td><td data-label="詳細">森林浴散步 (原宿站旁)</td></tr>
+                        <tr><td data-label="時段">下午</td><td data-label="活動">表參道購物</td><td data-label="詳細"><strong>10mois</strong> (嬰幼兒精品) ➔ 特色建築巡禮</td></tr>
+                        <tr><td data-label="時段">下午</td><td data-label="活動">原宿竹下通</td><td data-label="詳細">潮流逛街、特色美食</td></tr>
+                        <tr><td data-label="時段">傍晚</td><td data-label="活動">東京都廳夜景</td><td data-label="詳細">展望室看夕陽與新宿夜景</td></tr>
+                        <tr><td data-label="時段">晚上</td><td data-label="活動" class="highlight-red">鳥貴族 原宿明治通店</td><td data-label="詳細">高蛋白雞肉串燒末站</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -106,7 +116,7 @@
             <div class="tab-content">
                 <div class="info-box" style="background:#ffe3e3; border-color:#ff6b6b;">
                     ✈️ <strong>航班提醒：11:25 成田機場起飛</strong><br>
-                    建議：07:00 退房出發，前往機場辦理登機。
+                    建議：07:00 退房出發，前往機場。
                 </div>
                 <p style="text-align: center; padding: 20px;">旅程圓滿結束！祝歸國順利！</p>
             </div>
