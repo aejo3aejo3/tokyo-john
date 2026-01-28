@@ -1,127 +1,213 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 東京行程 (D1-D5 終極完全體)</title>
-    <style>
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 10px; color: #333; background-color: #f5f7fa; }
-        .container { max-width: 1100px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1 { color: #1c3d73; border-bottom: 3px solid #1c3d73; padding-bottom: 10px; font-size: 24px; text-align: center; }
-        .tabs { display: flex; flex-wrap: wrap; margin-bottom: 15px; }
-        .tabs input[type="radio"] { display: none; }
-        .tabs label { flex-grow: 1; text-align: center; padding: 12px 5px; background-color: #f4f4f4; border: 1px solid #ddd; border-bottom: none; cursor: pointer; border-radius: 5px 5px 0 0; margin-right: 2px; font-weight: bold; transition: 0.3s; font-size: 13px; }
-        .tabs input[type="radio"]:checked + label { background-color: #1c3d73; color: white; border-color: #1c3d73; }
-        .tab-content { order: 1; width: 100%; display: none; padding: 15px 0; border-top: 2px solid #1c3d73; }
-        .tabs input[type="radio"]:checked + label + .tab-content { display: block; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { padding: 12px; text-align: left; border: 1px solid #eee; font-size: 14px; }
-        th { background-color: #eef2f7; color: #1c3d73; font-weight: bold; }
-        tr:nth-child(even) { background-color: #fafbfc; }
-        .highlight-red { color: #d9534f; font-weight: bold; }
-        .highlight-blue { color: #1c3d73; font-weight: bold; }
-        .transport-box { background: #e8f5e9; border-left: 5px solid #4caf50; padding: 10px; margin-bottom: 15px; font-size: 13px; }
-        .info-box { background: #fff9db; border-left: 5px solid #fcc419; padding: 10px; margin-bottom: 15px; font-size: 13px; }
-        .spot-light { background: #f3f0ff; border-left: 5px solid #7048e8; padding: 10px; margin-top: 15px; font-size: 13px; border-radius: 4px; }
-        @media screen and (max-width: 800px) {
-            table, thead, tbody, th, td, tr { display: block; }
-            thead tr { position: absolute; top: -9999px; left: -9999px; } 
-            tr { border: 1px solid #ccc; margin-bottom: 15px; border-radius: 8px; }
-            td { border: none; border-bottom: 1px dotted #eee; position: relative; padding-left: 45% !important; text-align: right !important; }
-            td:before { content: attr(data-label); position: absolute; left: 10px; width: 40%; text-align: left; font-weight: bold; color: #1c3d73; }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>🗓️ 2026 東京行程 (D1-D5 終極完全體)</h1>
-
-        <div class="tabs">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>2026 東京行程 (D1-D5 最終定案版)</title>
+      <style>
+         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 10px; color: #333; background-color: #f5f7fa; }
+         .container { max-width: 1100px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+         h1 { color: #1c3d73; border-bottom: 3px solid #1c3d73; padding-bottom: 10px; font-size: 24px; text-align: center; }
+         .tabs { display: flex; flex-wrap: wrap; margin-bottom: 15px; }
+         .tabs input[type="radio"] { display: none; }
+         .tabs label { flex-grow: 1; text-align: center; padding: 12px 5px; background-color: #f4f4f4; border: 1px solid #ddd; border-bottom: none; cursor: pointer; border-radius: 5px 5px 0 0; margin-right: 2px; font-weight: bold; transition: 0.3s; font-size: 13px; }
+         .tabs input[type="radio"]:checked + label { background-color: #1c3d73; color: white; border-color: #1c3d73; }
+         .tab-content { order: 1; width: 100%; display: none; padding: 15px 0; border-top: 2px solid #1c3d73; }
+         .tabs input[type="radio"]:checked + label + .tab-content { display: block; }
+         table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+         th, td { padding: 12px; text-align: left; border: 1px solid #eee; font-size: 14px; }
+         th { background-color: #eef2f7; color: #1c3d73; font-weight: bold; }
+         tr:nth-child(even) { background-color: #fafbfc; }
+         .highlight-red { color: #d9534f; font-weight: bold; }
+         .highlight-blue { color: #1c3d73; font-weight: bold; }
+         .transport-box { background: #e8f5e9; border-left: 5px solid #4caf50; padding: 10px; margin-bottom: 15px; font-size: 13px; }
+         .info-box { background: #fff9db; border-left: 5px solid #fcc419; padding: 10px; margin-bottom: 15px; font-size: 13px; }
+         @media screen and (max-width: 800px) {
+         table, thead, tbody, th, td, tr { display: block; }
+         thead tr { position: absolute; top: -9999px; left: -9999px; } 
+         tr { border: 1px solid #ccc; margin-bottom: 15px; border-radius: 8px; }
+         td { border: none; border-bottom: 1px dotted #eee; position: relative; padding-left: 45% !important; text-align: right !important; }
+         td:before { content: attr(data-label); position: absolute; left: 10px; width: 40%; text-align: left; font-weight: bold; color: #1c3d73; }
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <h1>🗓️ 2026 東京行程 (D1-D5 最終定案版)</h1>
+         <div class="tabs">
             <input type="radio" id="d1" name="days" checked>
             <label for="d1">D1 (2/12)</label>
             <div class="tab-content">
-                <div class="transport-box">
-                    🚀 <strong>機場交通：</strong>方案 A (利木津巴士至 T-CAT) 或 方案 B (Access 特快至日本橋)。
-                </div>
-                <div class="info-box">📍 <strong>預約：Yakiniku Yamawarau (17:30)</strong></div>
-                <table>
-                    <thead><tr><th>時段</th><th>活動</th><th>詳細/備註</th></tr></thead>
-                    <tbody>
-                        <tr><td data-label="時段">下午</td><td data-label="活動">銀座巡禮</td><td data-label="詳細">銀座 Six、奢華品牌大道散步</td></tr>
-                        <tr><td data-label="時段">17:30</td><td data-label="活動" class="highlight-red">Yamawarau 燒肉</td><td data-label="詳細">和牛高品質蛋白質補充</td></tr>
-                        <tr><td data-label="時段">19:30</td><td data-label="活動" class="highlight-blue">銀座 Uniqlo</td><td data-label="詳細">全球旗艦店採購</td></tr>
-                        <tr><td data-label="時段">20:30</td><td data-label="活動" class="highlight-blue">雙點燈行程</td><td data-label="詳細">日比谷 & 丸之內 (步行約 10-15 分可串連)</td></tr>
-                    </tbody>
-                </table>
-                <div class="spot-light">
-                    ✨ <strong>關於「雙點燈」說明：</strong><br>
-                    <strong>1. HIBIYA Magic Time Illumination：</strong>紫色、藍色夢幻光影，主題為極光。<br>
-                    <strong>2. 丸之內點燈：</strong>1.2 公里經典香檳金 LED 燈大道，東京最奢華冬季經典。
-                </div>
+               <div class="transport-box">
+                  🚀 <strong>機場至飯店交通建議：</strong><br>
+                  <strong>● 方案 A (最省力)：</strong>利木津巴士 ➔ T-CAT (水天宮前)。<br>
+                  <strong>● 方案 B (高 CP 值)：</strong>京成 Access 特快 ➔ 日本橋站 (D2出口)。
+               </div>
+               <div class="info-box">📍 <strong>預約：山笑ふ 涮涮鍋 (17:15)</strong> / Chan ChienChing / 2名</div>
+               <table>
+                  <thead>
+                     <tr>
+                        <th>時段</th>
+                        <th>活動</th>
+                        <th>詳細/備註</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td data-label="時段">下午</td>
+                        <td data-label="活動">前往銀座</td>
+                        <td data-label="詳細">還有時間的話，簡單逛銀座</td>
+                     </tr>
+                     <tr>
+                        <td data-label="時段">17:15</td>
+                        <td data-label="活動" class="highlight-red">預約：山笑ふ 涮涮鍋</td>
+                        <td data-label="詳細">銀座店｜增肌減脂友善優質蛋白</td>
+                     </tr>
+                     <tr>
+                        <td data-label="時段">19:00</td>
+                        <td data-label="活動" class="highlight-blue">Uniqlo 銀座旗艦店</td>
+                        <td data-label="詳細">逛至 21:00 關門｜全日最大旗艦店</td>
+                     </tr>
+                     <tr>
+                        <td data-label="時段">21:00+</td>
+                        <td data-label="活動" class="highlight-blue">雙點燈行程</td>
+                        <td data-label="詳細">日比谷 & 丸之內仲通點燈 (深夜散步)</td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
-
             <input type="radio" id="d2" name="days">
             <label for="d2">D2 (2/13)</label>
             <div class="tab-content">
-                <div class="info-box">🍽️ <strong>淺草午餐：</strong>染太郎、淺草鶴二郎、江戶葫蘆文字燒<br>🍡 <strong>甜點：</strong>舟和仲見世 1 號店</div>
-                <table>
-                    <thead><tr><th>時段</th><th>活動</th><th>詳細/備註</th></tr></thead>
-                    <tbody>
-                        <tr><td data-label="時段">上午</td><td data-label="活動">上野公園</td><td data-label="詳細">晨間散步消脂</td></tr>
-                        <tr><td data-label="時段">中午</td><td data-label="活動">淺草雷門 & 午餐</td><td data-label="詳細">雷門參拜後，品嚐文字燒/御好燒</td></tr>
-                        <tr><td data-label="時段">下午</td><td data-label="活動" class="highlight-blue">淺草 & 錦糸町採買</td><td data-label="詳細">
-                            1. <strong>淺草ROX：</strong>COMME CA STYLE (九州好看短袖襯衫)<br>
-                            2. <strong>olinas：</strong>petit main (3F)<br>
-                            3. <strong>arcakit：</strong>阿卡將 (5F)、3coins (3F)
-                        </td></tr>
-                        <tr><td data-label="時段">晚上</td><td data-label="活動">燒肉 房家 / 唐吉</td><td data-label="詳細">上野六丁目店 / 24H 唐吉</td></tr>
-                    </tbody>
-                </table>
+               <div class="info-box">
+                  📝 <strong>預約資訊：房家燒肉 (18:30)</strong> / Chan ChienChing / 2名<br>
+                  🍽️ <strong>淺草午餐選：</strong>染太郎、淺草鶴二郎、江戶葫蘆文字燒<br>🍡 <strong>甜點：</strong>舟和仲見世 1 號店
+               </div>
+               <table>
+                  <thead>
+                     <tr>
+                        <th>時段</th>
+                        <th>活動</th>
+                        <th>詳細/備註</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td data-label="時段">上午</td>
+                        <td data-label="活動">上野公園</td>
+                        <td data-label="詳細">晨間散步</td>
+                     </tr>
+                     <tr>
+                        <td data-label="時段">中午</td>
+                        <td data-label="活動">淺草雷門 & 午餐</td>
+                        <td data-label="詳細">雷門參拜、文字燒體驗</td>
+                     </tr>
+                     <tr>
+                        <td data-label="時段">下午</td>
+                        <td data-label="活動" class="highlight-blue">錦糸町採買</td>
+                        <td data-label="詳細">Arcakit (阿卡將、大創)</td>
+                     </tr>
+                     <tr>
+                        <td data-label="時段">18:30</td>
+                        <td data-label="活動" class="highlight-red">預約：房家燒肉</td>
+                        <td data-label="詳細">上野六丁目店 (增肌大餐)</td>
+                     </tr>
+                     <tr>
+                        <td data-label="時段">晚上</td>
+                        <td data-label="活動">唐吉訶德</td>
+                        <td data-label="詳細">六本木店 (24H) 戰利品補貨</td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
-
             <input type="radio" id="d3" name="days">
             <label for="d3">D3 (2/14)</label>
             <div class="tab-content">
-                <div class="info-box">🍽️ <strong>午餐：</strong>AFURI 中目黑 (柚子鹽拉麵)</div>
-                <table>
-                    <thead><tr><th>時段</th><th>活動</th><th>詳細/備註</th></tr></thead>
-                    <tbody>
-                        <tr><td data-label="時段">08:30</td><td data-label="活動" class="highlight-blue">GARDEN HOUSE CRAFTS</td><td data-label="詳細">代官山早午餐</td></tr>
-                        <tr><td data-label="時段">上午</td><td data-label="活動">中目黑 & 代官山巡禮</td><td data-label="詳細">朝倉家舊宅 ➔ 目黑天空庭園 ➔ 星巴克旗艦店 / 蔦屋書店</td></tr>
-                        <tr><td data-label="時段">中午</td><td data-label="活動" class="highlight-red">AFURI 中目黑</td><td data-label="詳細">柚子鹽拉麵補充能量</td></tr>
-                        <tr><td data-label="時段">下午</td><td data-label="活動">涉谷最新地標</td><td data-label="詳細">宮下公園 / LINE FRIENDS 旗艦店</td></tr>
-                        <tr><td data-label="時段">晚上</td><td data-label="活動" class="highlight-red">涉谷 Legato</td><td data-label="詳細">高質感餐酒館慶祝 (情人節)</td></tr>
-                    </tbody>
-                </table>
+               <div class="info-box">🍽️ <strong>午餐：</strong>AFURI 中目黒 (柚子鹽拉麵)</div>
+               <table>
+                  <thead>
+                     <tr>
+                        <th>時段</th>
+                        <th>活動</th>
+                        <th>詳細/備註</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td data-label="時段">08:30</td>
+                        <td data-label="活動" class="highlight-blue">GARDEN HOUSE CRAFTS</td>
+                        <td data-label="詳細">代官山早午餐 (最早時段)</td>
+                     </tr>
+                     <tr>
+                        <td data-label="時段">上午</td>
+                        <td data-label="活動">中目黑 & 代官山巡禮</td>
+                        <td data-label="詳細">朝倉家舊宅 ➔ 目黑天空庭園 ➔ 星巴克旗艦店</td>
+                     </tr>
+                     <tr>
+                        <td data-label="時段">中午</td>
+                        <td data-label="活動" class="highlight-red">AFURI 中目黒</td>
+                        <td data-label="詳細">清爽系拉麵</td>
+                     </tr>
+                     <tr>
+                        <td data-label="時段">下午</td>
+                        <td data-label="活動">涉谷最新地標</td>
+                        <td data-label="詳細">宮下公園 / LINE FRIENDS 旗艦店</td>
+                     </tr>
+                     <tr>
+                        <td data-label="時段">晚上</td>
+                        <td data-label="活動" class="highlight-red">涉谷 Legato</td>
+                        <td data-label="詳細">質感餐酒館慶祝晚餐 (情人節)</td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
-
             <input type="radio" id="d4" name="days">
             <label for="d4">D4 (2/15)</label>
             <div class="tab-content">
-                <div class="info-box">🍰 <strong>午茶：</strong>HARBS 或 果實園</div>
-                <table>
-                    <thead><tr><th>時段</th><th>活動</th><th>詳細/備註</th></tr></thead>
-                    <tbody>
-                        <tr><td data-label="時段">上午</td><td data-label="活動" class="highlight-blue">明治神宮</td><td data-label="詳細">森林浴散步 (原宿站旁)</td></tr>
-                        <tr><td data-label="時段">下午</td><td data-label="活動">表參道購物</td><td data-label="詳細"><strong>10mois</strong> (嬰幼兒精品) ➔ 特色建築巡禮</td></tr>
-                        <tr><td data-label="時段">下午</td><td data-label="活動">原宿竹下通</td><td data-label="詳細">潮流逛街、特色美食</td></tr>
-                        <tr><td data-label="時段">傍晚</td><td data-label="活動">東京都廳夜景</td><td data-label="詳細">展望室看夕陽與新宿夜景</td></tr>
-                        <tr><td data-label="時段">晚上</td><td data-label="活動" class="highlight-red">鳥貴族 原宿明治通店</td><td data-label="詳細">高蛋白雞肉串燒末站</td></tr>
-                    </tbody>
-                </table>
+               <div class="info-box">🍽️ <strong>新宿午餐選：</strong>Afuri、敘敘苑、麵屋武藏<br>🍰 <strong>午茶：</strong>HARBS 或 果實園</div>
+               <table>
+                  <thead>
+                     <tr>
+                        <th>時段</th>
+                        <th>活動</th>
+                        <th>詳細/備註</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td data-label="時段">上午</td>
+                        <td data-label="活動" class="highlight-blue">明治神宮</td>
+                        <td data-label="詳細">森林浴散步</td>
+                     </tr>
+                     <tr>
+                        <td data-label="時段">下午</td>
+                        <td data-label="活動">竹下通 & 表參道</td>
+                        <td data-label="詳細">潮流逛街與建築巡禮</td>
+                     </tr>
+                      <tr>
+                        <td data-label="時段">傍晚</td>
+                        <td data-label="活動" class="highlight-blue">東京鐵塔夜景</td>
+                        <td data-label="詳細">Main + Top Deck (經典地標)</td>
+                     </tr>
+                     <tr>
+                        <td data-label="時段">晚上</td>
+                        <td data-label="活動" class="highlight-red">Hiyoku No Tori</td>
+                        <td data-label="詳細">串燒店，價格跟鳥貴族差不多。距離東京鐵塔走路850公尺</td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
-
             <input type="radio" id="d5" name="days">
             <label for="d5">D5 (2/16)</label>
             <div class="tab-content">
-                <div class="info-box" style="background:#ffe3e3; border-color:#ff6b6b;">
-                    ✈️ <strong>航班提醒：11:25 成田機場起飛</strong><br>
-                    建議：07:00 退房出發，前往機場。
-                </div>
-                <p style="text-align: center; padding: 20px;">旅程圓滿結束！祝歸國順利！</p>
+               <div class="info-box" style="background:#ffe3e3; border-color:#ff6b6b;">
+                  ✈️ <strong>航班提醒：11:25 成田機場起飛</strong><br>
+                  建議：07:00 退房出發，前往機場。
+               </div>
+               <p style="text-align: center; padding: 20px;">旅程圓滿結束！祝歸國順利！</p>
             </div>
-        </div>
-        <p style="text-align: center; color: #999; font-size: 11px;">-- 2026 東京行程完結 --</p>
-    </div>
-</body>
+         </div>
+         <p style="text-align: center; color: #999; font-size: 11px;">-- 2026 東京行程完結 --</p>
+      </div>
+   </body>
 </html>
