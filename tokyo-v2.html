@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>2026 東京行程 (D1-D5 最終定案版)</title>
+      <title>2026 東京行程 (茅場町飯店專屬版)</title>
       <style>
          body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 10px; color: #333; background-color: #f5f7fa; }
          .container { max-width: 1100px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
@@ -14,45 +14,89 @@
          .tabs input[type="radio"]:checked + label { background-color: #1c3d73; color: white; border-color: #1c3d73; }
          .tab-content { order: 1; width: 100%; display: none; padding: 15px 0; border-top: 2px solid #1c3d73; }
          .tabs input[type="radio"]:checked + label + .tab-content { display: block; }
-         table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+         table { width: 100%; border-collapse: collapse; margin: 10px 0; }
          th, td { padding: 12px; text-align: left; border: 1px solid #eee; font-size: 14px; }
          th { background-color: #eef2f7; color: #1c3d73; font-weight: bold; }
          tr:nth-child(even) { background-color: #fafbfc; }
+         .transport-title { margin-top: 25px; font-weight: bold; color: #2e7d32; display: flex; align-items: center; gap: 8px; }
+         .transport-table { border: 1px solid #e8f5e9; }
+         .transport-table th { background-color: #e8f5e9; color: #2e7d32; }
          .highlight-red { color: #d9534f; font-weight: bold; }
          .highlight-blue { color: #1c3d73; font-weight: bold; }
          .transport-box { background: #e8f5e9; border-left: 5px solid #4caf50; padding: 10px; margin-bottom: 15px; font-size: 13px; }
          .info-box { background: #fff9db; border-left: 5px solid #fcc419; padding: 10px; margin-bottom: 15px; font-size: 13px; }
-         @media screen and (max-width: 800px) {
-         table, thead, tbody, th, td, tr { display: block; }
-         thead tr { position: absolute; top: -9999px; left: -9999px; } 
-         tr { border: 1px solid #ccc; margin-bottom: 15px; border-radius: 8px; }
-         td { border: none; border-bottom: 1px dotted #eee; position: relative; padding-left: 45% !important; text-align: right !important; }
-         td:before { content: attr(data-label); position: absolute; left: 10px; width: 40%; text-align: left; font-weight: bold; color: #1c3d73; }
-         }
+         
+         /* 早餐與 Uniqlo 專用樣式 */
+         .breakfast-box { background: #fff4e6; border: 1px solid #ffd8a8; border-radius: 8px; padding: 15px; margin-bottom: 20px; }
+         .breakfast-title { color: #d9480f; font-weight: bold; font-size: 16px; margin-bottom: 10px; display: flex; align-items: center; gap: 5px; }
+         .breakfast-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+         .breakfast-item h4 { margin: 0 0 5px 0; color: #e67e22; font-size: 14px; }
+         .breakfast-item p { margin: 0; font-size: 13px; color: #5c5c5c; }
+         
+         .uniqlo-box { background: #e7f5ff; border: 1px solid #a5d8ff; border-radius: 8px; padding: 15px; margin-bottom: 15px; }
+         .uniqlo-title { color: #1971c2; font-weight: bold; font-size: 15px; margin-bottom: 8px; }
+         .uniqlo-content { font-size: 13px; }
+         .uniqlo-content b { color: #d9480f; }
       </style>
    </head>
    <body>
       <div class="container">
-         <h1>🗓️ 2026 東京行程 (D1-D5 最終定案版)</h1>
+         <h1>🗓️ 2026 東京行程 (茅場町飯店優化版)</h1>
+
+         <div class="breakfast-box">
+            <div class="breakfast-title">🥐 東京精選早餐清單 (口袋名單)</div>
+            <div class="breakfast-grid">
+               <div class="breakfast-item">
+                  <h4>📍 人形町 (飯店週邊)</h4>
+                  <p><strong>parklet：</strong>酸麵包第一，推薦季節ricotta、多種配料酸麵包、優格</p>
+                  <p><strong>bakery_bank：</strong>明太子法棍、紅豆司康</p>
+               </div>
+               <div class="breakfast-item">
+                  <h4>📍 表參道</h4>
+                  <p><strong>AMAM DACOTAN：</strong>超人氣知名麵包店，必點奶油麵包</p>
+               </div>
+               <div class="breakfast-item">
+                  <h4>📍 代代木</h4>
+                  <p><strong>path：</strong>荷蘭鬆餅第一，司康、可露麗也極推薦</p>
+                  <p><strong>tecona bagel：</strong>最愛貝果店，有四五種嚼勁可選</p>
+                  <p><strong>PREMIER MAI：</strong>精緻儀式感早餐店</p>
+               </div>
+            </div>
+         </div>
+
          <div class="tabs">
             <input type="radio" id="d1" name="days" checked>
             <label for="d1">D1 (2/12)</label>
             <div class="tab-content">
                <div class="transport-box">
-                  🚀 <strong>機場至飯店交通建議：</strong><br>
+                       🚀 <strong>機場至飯店交通建議：</strong><br>
                   <strong>● 方案 A (最省力)：</strong>利木津巴士 ➔ T-CAT (水天宮前)。<br>
                   <strong>● 方案 B (高 CP 值)：</strong>京成 Access 特快 ➔ 日本橋站 (D2出口)。
                </div>
+
+               <div class="uniqlo-box">
+                  <div class="uniqlo-title">🏙️ 銀座 Uniqlo 必逛攻略 (12層樓旗艦店)</div>
+                  <div class="uniqlo-content">
+                     <strong>1️⃣ 交通秒懂：</strong>直達「銀座站」C3出口❗️走5分鐘看到12層高大樓即達。<br>
+                     <strong>2️⃣ 必逛黃金樓層：</strong><br>
+                     ● <b>11F UT狂熱區：必去重點❗️</b> 獨家「銀座限定UT」、三麗鷗、哆啦A夢限定款。<br>
+                     ● <b>5F 定製工坊：</b>現場DIY專屬T恤/帆布包，有史努比、Kitty圖案(建議先取號)。<br>
+                     ● <b>8-10F 男裝天堂：</b>8F牛仔褲、9F襪子牆、10F高CP值西裝，男生必逛！<br>
+                     ● <b>3-6F 女裝區：</b>款式齊全，內衣在6樓。<br>
+                     <strong>3️⃣ 省錢省力Tips：</strong>東西隨意撿，統一在3/5/7/9/10/11樓結帳即可（跨樓層結帳）。
+                  </div>
+               </div>
+
                <div class="info-box">📍 <strong>預約：山笑ふ 涮涮鍋 (17:15)</strong> / Chan ChienChing / 2名</div>
                <table>
                   <thead>
                      <tr>
                         <th>時段</th>
                         <th>活動</th>
-                        <th>詳細/備註</th>
+                        <th>詳細</th>
                      </tr>
                   </thead>
-                  <tbody>
+ <tbody>
                      <tr>
                         <td data-label="時段">下午</td>
                         <td data-label="活動">前往銀座</td>
@@ -75,6 +119,31 @@
                      </tr>
                   </tbody>
                </table>
+               <div class="transport-title">🚇 交通路徑 (以飯店為起點)</div>
+               <table class="transport-table">
+                  <thead>
+                     <tr>
+                        <th>路段</th>
+                        <th>交通方式</th>
+                        <th>時間</th>
+                        <th>票價</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>飯店 ➔ 銀座</td>
+                        <td>日比谷線 (茅場町 ➔ 銀座)</td>
+                        <td>6分</td>
+                        <td>¥180</td>
+                     </tr>
+                     <tr>
+                        <td>點燈處 ➔ 飯店</td>
+                        <td>日比谷線 (日比谷 ➔ 茅場町)</td>
+                        <td>10分</td>
+                        <td>¥180</td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <input type="radio" id="d2" name="days">
             <label for="d2">D2 (2/13)</label>
@@ -84,14 +153,7 @@
                   🍽️ <strong>淺草午餐選：</strong>染太郎、淺草鶴二郎、江戶葫蘆文字燒<br>🍡 <strong>甜點：</strong>舟和仲見世 1 號店
                </div>
                <table>
-                  <thead>
-                     <tr>
-                        <th>時段</th>
-                        <th>活動</th>
-                        <th>詳細/備註</th>
-                     </tr>
-                  </thead>
-                  <tbody>
+ <tbody>
                      <tr>
                         <td data-label="時段">上午</td>
                         <td data-label="活動">上野公園</td>
@@ -119,19 +181,49 @@
                      </tr>
                   </tbody>
                </table>
+               <div class="transport-title">🚇 交通路徑 (以飯店為起點)</div>
+               <table class="transport-table">
+                  <thead>
+                     <tr>
+                        <th>路段</th>
+                        <th>交通方式</th>
+                        <th>時間</th>
+                        <th>票價</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>飯店 ➔ 上野</td>
+                        <td>日比谷線 (茅場町 ➔ 上野) 直達</td>
+                        <td>10分</td>
+                        <td>¥180</td>
+                     </tr>
+                     <tr>
+                        <td>上野 ➔ 淺草</td>
+                        <td>銀座線 (上野 ➔ 淺草)</td>
+                        <td>5分</td>
+                        <td>¥180</td>
+                     </tr>
+                     <tr>
+                        <td>淺草 ➔ 錦糸町</td>
+                        <td>都營淺草線 ➔ 押上 ➔ 半藏門線</td>
+                        <td>15分</td>
+                        <td>¥290</td>
+                     </tr>
+                     <tr>
+                        <td>上野 ➔ 飯店</td>
+                        <td>日比谷線 (上野 ➔ 茅場町) 直達</td>
+                        <td>10分</td>
+                        <td>¥180</td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <input type="radio" id="d3" name="days">
             <label for="d3">D3 (2/14)</label>
             <div class="tab-content">
-               <div class="info-box">🍽️ <strong>午餐：</strong>AFURI 中目黒 (柚子鹽拉麵)</div>
+               <div class="info-box">🍽️ <strong>午餐：</strong>AFURI 中目黑</div>
                <table>
-                  <thead>
-                     <tr>
-                        <th>時段</th>
-                        <th>活動</th>
-                        <th>詳細/備註</th>
-                     </tr>
-                  </thead>
                   <tbody>
                      <tr>
                         <td data-label="時段">08:30</td>
@@ -151,7 +243,7 @@
                      <tr>
                         <td data-label="時段">下午</td>
                         <td data-label="活動">涉谷最新地標</td>
-                        <td data-label="詳細">宮下公園 / LINE FRIENDS 旗艦店</td>
+                        <td data-label="詳細">宮下公園 / LINE FRIENDS 旗艦店 / <span class="highlight-blue">BEAMS 澀谷店 (男裝)</span> / <span class="highlight-blue">澀谷 Parco</span></td>
                      </tr>
                      <tr>
                         <td data-label="時段">晚上</td>
@@ -160,20 +252,44 @@
                      </tr>
                   </tbody>
                </table>
+               <div class="transport-title">🚇 交通路徑 (以飯店為起點)</div>
+               <table class="transport-table">
+                  <thead>
+                     <tr>
+                        <th>路段</th>
+                        <th>交通方式</th>
+                        <th>時間</th>
+                        <th>票價</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>飯店 ➔ 中目黑</td>
+                        <td>日比谷線 (茅場町 ➔ 中目黑) 直達</td>
+                        <td>25分</td>
+                        <td>¥210</td>
+                     </tr>
+                     <tr>
+                        <td>中目黑 ➔ 涉谷</td>
+                        <td>東急東橫線 (1站)</td>
+                        <td>4分</td>
+                        <td>¥140</td>
+                     </tr>
+                     <tr>
+                        <td>涉谷 ➔ 飯店</td>
+                        <td>銀座線 (涉谷 ➔ 日本橋) ➔ 東西線 ➔ 茅場町</td>
+                        <td>25分</td>
+                        <td>¥210</td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <input type="radio" id="d4" name="days">
             <label for="d4">D4 (2/15)</label>
             <div class="tab-content">
-               <div class="info-box">🍽️ <strong>新宿午餐選：</strong>Afuri、敘敘苑、麵屋武藏<br>🍰 <strong>午茶：</strong>HARBS 或 果實園</div>
+               <div class="info-box">🗼 <strong>夜景：</strong>東京鐵塔</div>
                <table>
-                  <thead>
-                     <tr>
-                        <th>時段</th>
-                        <th>活動</th>
-                        <th>詳細/備註</th>
-                     </tr>
-                  </thead>
-                  <tbody>
+                    <tbody>
                      <tr>
                         <td data-label="時段">上午</td>
                         <td data-label="活動" class="highlight-blue">明治神宮</td>
@@ -182,7 +298,7 @@
                      <tr>
                         <td data-label="時段">下午</td>
                         <td data-label="活動">竹下通 & 表參道</td>
-                        <td data-label="詳細">潮流逛街與建築巡禮</td>
+                        <td data-label="詳細">潮流逛街與建築巡禮 / <span class="highlight-blue">BEAMS 原宿 HARAJUKU LIMITED STORE</span></td>
                      </tr>
                       <tr>
                         <td data-label="時段">傍晚</td>
@@ -196,18 +312,69 @@
                      </tr>
                   </tbody>
                </table>
+               <div class="transport-title">🚇 交通路徑 (以飯店為起點)</div>
+               <table class="transport-table">
+                  <thead>
+                     <tr>
+                        <th>路段</th>
+                        <th>交通方式</th>
+                        <th>時間</th>
+                        <th>票價</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>飯店 ➔ 原宿</td>
+                        <td>東西線 (茅場町 ➔ 日本橋) ➔ 銀座線 (➔ 表參道)</td>
+                        <td>25分</td>
+                        <td>¥210</td>
+                     </tr>
+                     <tr>
+                        <td>表參道 ➔ 東京鐵塔</td>
+                        <td>銀座線 ➔ 溜池山王 ➔ 日比谷線 (➔ 神谷町)</td>
+                        <td>15分</td>
+                        <td>¥180</td>
+                     </tr>
+                     <tr>
+                        <td>串燒店 ➔ 飯店</td>
+                        <td>日比谷線 (六本木或神谷町 ➔ 茅場町) 直達</td>
+                        <td>18分</td>
+                        <td>¥210</td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
             <input type="radio" id="d5" name="days">
             <label for="d5">D5 (2/16)</label>
             <div class="tab-content">
-               <div class="info-box" style="background:#ffe3e3; border-color:#ff6b6b;">
-                  ✈️ <strong>航班提醒：11:25 成田機場起飛</strong><br>
-                  建議：07:00 退房出發，前往機場。
-               </div>
-               <p style="text-align: center; padding: 20px;">旅程圓滿結束！祝歸國順利！</p>
+               <div class="info-box" style="background:#ffe3e3;">✈️ 11:25 起飛 ➔ 建議 07:00 出發</div>
+               <div class="transport-title">🚇 飯店至成田機場</div>
+               <table class="transport-table">
+                  <thead>
+                     <tr>
+                        <th>路徑</th>
+                        <th>交通方式</th>
+                        <th>時間</th>
+                        <th>票價</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>飯店 ➔ 機場</td>
+                        <td>步行至 T-CAT 搭利木津巴士 (最推)</td>
+                        <td>60-80分</td>
+                        <td>¥3,100</td>
+                     </tr>
+                     <tr>
+                        <td>飯店 ➔ 機場</td>
+                        <td>茅場町 ➔ 日本橋 (都營淺草線 Access 特快)</td>
+                        <td>70分</td>
+                        <td>¥1,350</td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
          </div>
-         <p style="text-align: center; color: #999; font-size: 11px;">-- 2026 東京行程完結 --</p>
       </div>
    </body>
 </html>
