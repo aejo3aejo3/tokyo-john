@@ -5,206 +5,199 @@
     <style>
         @page {
             size: A4;
-            margin: 0;
-            background-color: #f0f9ff;
+            margin: 15mm;
+            background-color: #fcfcfc;
         }
         body {
-            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
-            color: #2c3e50;
-            line-height: 1.5;
+            font-family: sans-serif;
+            color: #333;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f0f9ff;
         }
-        .hero {
-            background: linear-gradient(135deg, #3498db, #2ecc71);
+        .header {
+            background-color: #2c3e50;
             color: white;
-            padding: 40px 20px;
+            padding: 20pt;
             text-align: center;
-            border-bottom-left-radius: 50% 20px;
-            border-bottom-right-radius: 50% 20px;
+            border-bottom: 4px solid #3498db;
         }
-        .hero h1 {
+        .header h1 {
             margin: 0;
-            font-size: 28pt;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            font-size: 22pt;
+            letter-spacing: 2px;
         }
-        .hero p {
-            margin: 10px 0 0;
-            font-size: 14pt;
-            font-weight: 300;
-        }
-        .content {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .day-card {
-            background: white;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            overflow: hidden;
-            border-left: 8px solid #3498db;
-        }
-        .day-header {
-            background-color: #f8f9fa;
-            padding: 15px 20px;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .day-title {
-            font-size: 18pt;
-            color: #3498db;
-            margin: 0;
-            font-weight: bold;
-        }
-        .day-date {
+        .header p {
+            margin: 5pt 0 0 0;
             font-size: 11pt;
-            color: #7f8c8d;
+            opacity: 0.9;
         }
-        .day-body {
-            padding: 20px;
+        .container {
+            padding: 20pt;
         }
-        .itinerary-table {
+        .section-title {
+            color: #2c3e50;
+            border-left: 5px solid #3498db;
+            padding-left: 10pt;
+            margin: 20pt 0 10pt 0;
+            font-size: 15pt;
+        }
+        table {
             width: 100%;
             border-collapse: collapse;
+            margin-bottom: 20pt;
+            background: white;
         }
-        .itinerary-table td {
-            padding: 10px 0;
-            vertical-align: top;
-            border-bottom: 1px dashed #eee;
-        }
-        .time {
-            width: 80px;
+        th {
+            background-color: #f8f9fa;
+            color: #2c3e50;
             font-weight: bold;
-            color: #e67e22;
+            text-align: left;
+            padding: 12pt;
+            border-bottom: 2px solid #dee2e6;
         }
-        .activity {
-            font-size: 11pt;
+        td {
+            padding: 12pt;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
         }
-        .meals {
-            margin-top: 15px;
-            background-color: #fff9db;
-            padding: 10px 15px;
-            border-radius: 10px;
+        .time-col {
+            width: 25%;
+            font-weight: bold;
+            color: #3498db;
+        }
+        .activity-col {
+            width: 35%;
+        }
+        .transport-col {
+            width: 40%;
             font-size: 10pt;
+            color: #666;
         }
-        .meals b { color: #d35400; }
-        .tips {
-            margin-top: 15px;
-            font-size: 10pt;
-            color: #27ae60;
-            background-color: #ebfaef;
-            padding: 10px 15px;
-            border-radius: 10px;
+        .info-box {
+            background-color: #e8f4fd;
+            border-radius: 8px;
+            padding: 15pt;
+            margin-bottom: 15pt;
+        }
+        .info-box h3 {
+            margin-top: 0;
+            color: #2980b9;
+            font-size: 12pt;
+        }
+        .info-box ul {
+            margin: 0;
+            padding-left: 15pt;
+        }
+        .info-box li {
+            margin-bottom: 5pt;
         }
         .footer {
             text-align: center;
-            padding: 30px;
-            font-size: 10pt;
-            color: #bdc3c7;
+            font-size: 9pt;
+            color: #999;
+            margin-top: 30pt;
+            border-top: 1px solid #eee;
+            padding-top: 10pt;
         }
-        .highlight-day {
-            border-left-color: #f1c40f;
-            background-color: #fffef0;
+        .highlight {
+            color: #e67e22;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <h1>釜山藍調 ‧ 親子度假之旅</h1>
-        <p>興聯科技 2026 員工旅遊 | 5/6 - 5/10</p>
+    <div class="header">
+        <h1>釜山親子自由行：精簡暖心版</h1>
+        <p>專為 2 歲幼童與推車家庭設計 • 興聯科技員工旅遊 Day 4</p>
     </div>
 
-    <div class="content">
-        <!-- DAY 1 -->
-        <div class="day-card">
-            <div class="day-header">
-                <h2 class="day-title">Day 1 ‧ 出發！擁抱釜山</h2>
-                <span class="day-date">2026.05.06 (Wed)</span>
-            </div>
-            <div class="day-body">
-                <table class="itinerary-table">
-                    <tr><td class="time">上午</td><td class="activity"><b>啟程與抵達：</b>桃園機場 ✈️ 釜山金海機場 (CI190/CI188)</td></tr>
-                    <tr><td class="time">下午</td><td class="activity"><b>文化探險：</b>甘川洞文化村 (積木村拍照) ➔ 松島海上纜車 & 天空步道</td></tr>
-                    <tr><td class="time">晚上</td><td class="activity"><b>逛街時刻：</b>南浦洞商圈、BIFF 廣場散策</td></tr>
-                </table>
-                <div class="meals"><b>🍽️ 今日餐點：</b>午餐：韓式石鍋拌飯+涮涮鍋 / 晚餐：二代祖豬肉湯飯</div>
-                <div class="tips">💡 <b>溫馨提醒：</b>甘川洞階梯多，建議揹帶或輕便型推車；松島海風較大，幫小朋友備好薄外套。</div>
-            </div>
+    <div class="container">
+        <div class="section-title">今日行程概覽</div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="time-col">時間</th>
+                    <th class="activity-col">行程內容</th>
+                    <th class="transport-col">交通方式與重點</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">09:30 - 10:00</td>
+                    <td>出發前往海雲台</td>
+                    <td><strong>計程車</strong> (車程約 30min)。</td>
+                </tr>
+                <tr>
+                    <td class="time-col">10:00 - 12:00</td>
+                    <td>SEA LIFE 釜山水族館</td>
+                    <td>室內恆溫、推車友善，適合放電。</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:00 - 12:30</td>
+                    <td>返回飯店</td>
+                    <td><strong>計程車</strong> 直達 CONNECT Busan。</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:30 - 15:00</td>
+                    <td>午餐與午休時間</td>
+                    <td>確保小孩有充足睡眠，大人體力回填。</td>
+                </tr>
+                <tr>
+                    <td class="time-col">15:00 - 17:00</td>
+                    <td>樂天百貨光復店</td>
+                    <td><strong>步行 5min</strong>。看水舞秀、頂樓花園。</td>
+                </tr>
+                <tr>
+                    <td class="time-col">17:00 - 18:45</td>
+                    <td>南浦洞精選晚餐</td>
+                    <td><strong>步行</strong>。在飯店附近吃飽、吃暖。</td>
+                </tr>
+                <tr>
+                    <td class="time-col">18:45 - 19:30</td>
+                    <td>前往廣安里海灘</td>
+                    <td><strong>計程車</strong> (車程約 30-40min)。</td>
+                </tr>
+                <tr>
+                    <td class="time-col">19:30 - 20:00</td>
+                    <td>現場卡位</td>
+                    <td><span class="highlight">19:30 抵達</span>，減少在海邊吹風時間。</td>
+                </tr>
+                <tr>
+                    <td class="time-col">20:00 - 20:10</td>
+                    <td>無人機表演</td>
+                    <td>廣安里海灘震撼視覺盛宴。</td>
+                </tr>
+                <tr>
+                    <td class="time-col">20:20 - 21:00</td>
+                    <td>返回飯店休息</td>
+                    <td><strong>計程車</strong>，回飯店洗熱水澡。</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="section-title">晚餐推薦 (南浦洞/樂天百貨)</div>
+        <div class="info-box">
+            <h3>🍴 親子友善與營養精選</h3>
+            <ul>
+                <li><strong>南浦參雞湯：</strong> 雞肉軟嫩適口，雞湯拌飯是小孩最愛，提供優質蛋白質。</li>
+                <li><strong>密陽豬肉湯飯：</strong> 點「白切肉定食」，清燙肉片健康無負擔。</li>
+                <li><strong>豆田裡嫩豆腐：</strong> 附設自助小菜吧，可攝取大量蔬菜與膳食纖維。</li>
+            </ul>
         </div>
 
-        <!-- DAY 2 -->
-        <div class="day-card">
-            <div class="day-header">
-                <h2 class="day-title">Day 2 ‧ 海景與療癒時光</h2>
-                <span class="day-date">2026.05.07 (Thu)</span>
-            </div>
-            <div class="day-body">
-                <table class="itinerary-table">
-                    <tr><td class="time">上午</td><td class="activity"><b>祈福之旅：</b>海東龍宮寺 (韓國唯一海邊佛寺)</td></tr>
-                    <tr><td class="time">下午</td><td class="activity"><b>海線之美：</b>Blue Line Park 海岸列車 ➔ 青沙浦天空步道 (眺望青龍)</td></tr>
-                    <tr><td class="time">晚上</td><td class="activity"><b>舒壓放鬆：</b>ClubD Oasis 頂級海景汗蒸幕 ➔ 廣安里 Millac the Market</td></tr>
-                </table>
-                <div class="meals"><b>🍽️ 今日餐點：</b>午餐：長腳蟹餐+蟹膏炒飯 / 晚餐：伍班長烤肉或味贊王鹽烤肉</div>
-                <div class="tips">💡 <b>溫馨提醒：</b>汗蒸幕小孩可以一同進入，是全家放鬆的好時機。</div>
-            </div>
-        </div>
-
-        <!-- DAY 3 -->
-        <div class="day-card">
-            <div class="day-header">
-                <h2 class="day-title">Day 3 ‧ 城市漫遊與血拼</h2>
-                <span class="day-date">2026.05.08 (Fri)</span>
-            </div>
-            <div class="day-body">
-                <table class="itinerary-table">
-                    <tr><td class="time">上午</td><td class="activity"><b>視覺饗宴：</b>五六島 Skywalk ➔ 二妓台展望台 (絕美海岸線)</td></tr>
-                    <tr><td class="time">下午</td><td class="activity"><b>購物天堂：</b>新世界百貨 Centum City (全球最大) ➔ 西面鬧區、地下街</td></tr>
-                </table>
-                <div class="meals"><b>🍽️ 今日餐點：</b>午餐：海鮮刀削麵+煎餅 / 晚餐：西面商圈自由食 (自理)</div>
-                <div class="tips">💡 <b>溫馨提醒：</b>西面地下街路面平坦，推車非常方便，是補貨韓系童裝的好地方。</div>
-            </div>
-        </div>
-
-        <!-- DAY 4 (Highlighted) -->
-        <div class="day-card highlight-day">
-            <div class="day-header">
-                <h2 class="day-title">Day 4 ‧ 我們的自由練習曲 ✨</h2>
-                <span class="day-date">2026.05.09 (Sat)</span>
-            </div>
-            <div class="day-body">
-                <table class="itinerary-table">
-                    <tr><td class="time">09:30</td><td class="activity"><b>水族館時光：</b>SEA LIFE 釜山水族館 (2歲小孩最愛)</td></tr>
-                    <tr><td class="time">12:30</td><td class="activity"><b>回房充電：</b>返回飯店午餐及午睡 (保持戰力)</td></tr>
-                    <tr><td class="time">15:00</td><td class="activity"><b>悠閒南浦：</b>樂天百貨光復店 (水舞秀) ➔ 南浦洞深度晚餐</td></tr>
-                    <tr><td class="time">19:30</td><td class="activity"><b>璀璨回憶：</b>廣安里沙灘卡位 ➔ 20:00 無人機表演 🌌</td></tr>
-                </table>
-                <div class="meals"><b>🍽️ 今日餐點：</b>全日自理 (推薦：南浦參雞湯，補足蛋白質)</div>
-                <div class="tips">💡 <b>自由行攻略：</b>此日全程計程車 + 步行，不趕路。7:30 抵達海邊即可，減少吹風時間。</div>
-            </div>
-        </div>
-
-        <!-- DAY 5 -->
-        <div class="day-card">
-            <div class="day-header">
-                <h2 class="day-title">Day 5 ‧ 珍重再見</h2>
-                <span class="day-date">2026.05.10 (Sun)</span>
-            </div>
-            <div class="day-body">
-                <table class="itinerary-table">
-                    <tr><td class="time">上午</td><td class="activity"><b>最後巡禮：</b>飯店早餐 ➔ 整理行李前往金海機場 (CI191)</td></tr>
-                    <tr><td class="time">下午</td><td class="activity"><b>平安歸家：</b>抵達桃園機場 ✈️ 暖暖的家</td></tr>
-                </table>
-                <div class="meals"><b>🍽️ 今日餐點：</b>早餐：飯店提供 / 午餐：機上簡餐</div>
-            </div>
+        <div class="section-title">家長貼心備忘</div>
+        <div class="info-box" style="background-color: #fff4e6;">
+            <h3>🛡️ 防寒與防護</h3>
+            <ul>
+                <li><strong>洋蔥式穿法：</strong> 海邊晚上體感僅約 13-15°C，請備妥防風外套。</li>
+                <li><strong>推車配備：</strong> 建議準備小薄毯蓋在推車上，可有效阻擋海風。</li>
+                <li><strong>交通配套：</strong> 建議手機安裝 <strong>Kakao Taxi</strong>，散場叫車更快速。</li>
+            </ul>
         </div>
 
         <div class="footer">
-            Design for 35yo Dad & 2.5yo Son • 2026 Busan Memories
+            Wish you and your family a wonderful trip in Busan!
         </div>
     </div>
 </body>
